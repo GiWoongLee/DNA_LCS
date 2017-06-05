@@ -1,16 +1,15 @@
 from consts import *
 from sys import argv
+import argparse
+
+parser = argparse.ArgumentParser(description='Hairpin Finder by woong. Please Enjoy!')
+parser.add_argument('-v', '--verbose', help='increase output verbosity', action='store_true')
+parser.add_argument('input_file', help='input file to read a DNA sequence', type=argparse.FileType('r'))
+args = parser.parse_args()
 
 # #Main Function
 # #read file name from script argument and deliver it to setDNAseq()
-def main():
-
-    # File => Memory(DNA_SEQ)
-    # ### NEED TO MODIFIED from 'DNAseq.fasta' to script argument name ###
-    with open('DNAseq.fasta') as f:
-        DNASeq = f.readlines()[1:]
-        f.close()
-
+def main(DNASeq):
     # Exception - Wrong File Input
     # Exception - LOOP_ITERATION_NUM Too short
 
@@ -59,7 +58,7 @@ def kmerExist(DNASeq,currPos):
             break
 
         targetKMer = DNASeq[currPos + distance - K_MER_LENGTH:currPos + distance]
-        if isPalindrome(baseKMer,targetKMer):
+        if baseKMer == targetKMer[::-1]:
             return {'exist':True, 'lKMerStartPos':currPos,'lKMerEndPos':currPos+K_MER_LENGTH-1,'rKMerStartPos':currPos+distance-K_MER_LENGTH,'rKMerEndPos':currPos+distance-1}
         else:
             continue
@@ -295,3 +294,11 @@ def checkIndelNum(iterTarget,pos,extendingDirection):
 #Output : is candidate hairpin sequence? + if yes, return lcs and loop string
 def isHairpinConstraint(loopLength,hairpinSequenceLength):
     return (0 <= loopLength <= MAX_EXP_LOOP_LENGTH) and (MIN_EXP_HAIRPIN_LENGTH <= hairpinSequenceLength <= MAX_EXP_HAIRPIN_LENGTH)
+
+if __name__ == '__main__':
+    DNASeq = ""
+    with args.input_file as f:
+        DNASeq = f.readlines()[1:]
+        f.close()
+
+    main(DNASeq)
