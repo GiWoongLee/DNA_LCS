@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf326a0-2c5f-4771-9b00-9b221c75a79f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="209" column="8" lean-forward="false" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
+            <state relative-caret-position="60">
+              <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -30,12 +29,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -85,7 +84,6 @@
       <find>extendInfo</find>
       <find>AGTTTTATTCACCCCACCACCTCCACCATCACCACTCTCTCGCGGGAGATCATGCTTTGCGTTCCGAGCCCTACCGGAACTGCAAGGGCCATCTGAGCCTATGCGTATTCGTACTTAGAAGGGCGCCTCTCTCACCACTACTCCCATCACCACTCTCTCGCGGGAGATCATGCTTTGCGTTCCGAGCCCTACCGGAACTGCAAGGGCCATCTGAGCCTATGCGTATTCGTACTTAGAAGGGCGCCTCTCTCACCACTACTCACCTCCACCATCCCCTTATTTGA</find>
       <find>AAAGCGAAGCTCCTAAAGGGGAGTGGATTGACCGAAGTGCTCTATTTACAGTTGACGCGCACCGCTACACCTCTTAAAACGATTTATAAGGTGGACTACACCCCGGTGTCCTGTGGTCGCCCACATAGCAGGGGACTACACCCCGGTGTCCTGTGGTCGCCCACATAGCAGGGTGAATAATATTTAGCAGAAATTCTCCAATCGCACGCATTGACATTATCTGTGAAGCCTTAGGTGCAGGAGGAATCTGAAGCGAGAA</find>
-      <find>print</find>
       <find>TCGGTGTGACCGATTGCTGACTGGGCGAGAAGCCTTACTTCGTTGTTAGGGCAGGCAGTGGCCTGGCCCACATATTTGACGAATGACAGCCGTTTCGTGGCGTTCCATCCTCGTTGGGATGCTTATGCTCGACAGTAGCAGTTAGTAACCCGTCCACGGTACGGACGGGTTGTAGTGCTCATCCGAAGAGCGGTCTAGTCCGTTAGAGTGGGCT</find>
       <find>AGCCCTGATCGTCAGACGCATTCACGACTTTTGCACCAACTTAACTTAACTCGATGTAAAACTATTGACAGGACTAAACTGATGCGGAGACTAGTTTTTTTGCTAGGCATCGGTTTTTGGACAGAGCGCGTAGGTCCACAATTCAGGACGAGTATATAAAATGTTAGCTCATCTCAATAACCACGTTTTCAGCACCTACGCAGCACCTTGCTGAGCCCA</find>
       <find>TTCTGCCTGAACTTGTCGTGTCGACAGAAAACGTGGGCGAGCGGCACTCGAGGCTCGTTCATTCACACATCCTCGCTATTCTGCTATTTGTGGCGTATTTTCGCGCAGCCTGGTAGTTGGCTTGCCGTATCGGTTATGTCCGTACGCCTTTTATGGTGTTATCGCCTTATTCGCTCCTACACCTTTCTTGCTCGGGAGCATCACCGGCGGAGGGTGCTAAAGAGCCAGCTGTCGCTGTATCAAGTCGTCTT</find>
@@ -94,6 +92,7 @@
       <find>AAAGCGAAGCTCCTAAAGGGGAGTGGATTGACCGAAGTGCTCTATTTACAGTTGACGCGCACCGCTACACCTCTTAAAACGATTTATAAGGTGGACTACACCCCGGTGTCCTGTGGTCGCCCACATAGCAGGGTGAATAATATTTAGCAGAAATTCTCCAATCGCACGCATTGACATTATCTGTGAAGCCTTAGGTGCAGGAGGAATCTGAAGCGAGAA</find>
       <find>TTAATTAGGCGCTCGGCTTCAATAGCGGGTATCGATAGGACGACTGGAAGGGTTCCTGTTTACCCGGCGCCTCAGCACCGGGAGGCGTGTTTGAACCCGACGGTTGACAAGTGACTGGAGCCTTGACTTCAGTTCGAGGTCTCAAGTAGGGCAGACGCCAATCTTGTAGCTGGAGGGCCACACTCCACTGGCCCATGCCTTGGGAAGGTCAGAGGGATGCTATGGTGGCGATAACTATGGCCTCGCACGGATTATT</find>
       <find>finalCheck</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,10 +102,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/consts.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/DNAseq1.fasta" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -512,11 +511,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DNAseq1.fasta" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             <folding />
           </first_editor>
           <second_editor />
@@ -526,26 +545,6 @@
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DNAseq1.fasta" />
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="209" column="8" lean-forward="false" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

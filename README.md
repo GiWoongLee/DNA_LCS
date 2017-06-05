@@ -6,7 +6,7 @@ terminal에서 python3 커맨드를 사용할 수 있다면 ($PROJECT_ROOT)/main
 
 
 ```
-Hairpin Finder by soo. Please Enjoy!
+Hairpin Finder by woong. Please Enjoy!
 
 positional arguments:
   input_file     input file to read a DNA sequence
