@@ -205,11 +205,8 @@ def finalCheck(lLcsInfo,KMer,rLcsInfo,lastMatchPos,lLcsStr,rLcsStr):
     loopSeq = ''.join(loopStr)
 
     if(isHairpinConstraint(len(loopSeq),len(hairpinSeq))):
-        print("HAIRPIN: ")
         print(hairpinSeq)
-        print("LCSSEQ: ")
         print(lcsSeq)
-        print("LOOPSEQ: ")
         print(loopSeq)
         print()
         return True
