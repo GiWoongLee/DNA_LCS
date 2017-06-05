@@ -29,16 +29,6 @@ def main(DNASeq):
                 extendInfo = extendKMerToLCS(processedLcsInfo1,candRegion['leftKMer'],processedLcsInfo2)
                 isHairPin = finalCheck(processedLcsInfo1,candRegion['leftKMer'],processedLcsInfo2,extendInfo[0],extendInfo[1],extendInfo[2])
                 if(isHairPin):
-                    # print(candRegion['leftKMer'])
-                    # print(candRegion['rightKMer'])
-                    # print(temp['lKMerStartPos'])
-                    # print(temp['rKMerStartPos'])
-                    # print(candRegion['csStr'])
-                    # print(candRegion['lsStr'])
-                    # print(candRegion['rsStr'])
-                    # print(candRegion['rsStr'][::-1])
-                    # print(len(candRegion['rsStr'][::-1]))
-                    # print(extendInfo)
                     nextPosAfterHairPin = pos + MAX_EXP_HAIRPIN_LENGTH - len(candRegion['lsStr'])
                     break
                 else:
@@ -122,7 +112,7 @@ def processLcsInfo(matchResult,lcsLength,charPair,res,i,j):
 #Output: last Match Position within left LCS part and right LCS part
 def extendKMerToLCS(lLcsInfo,kMer,rLcsInfo):
     tempPos = len(lLcsInfo)
-    tempPos2 = 0
+    tempPos2 = -1
     lStrlist = []
     rStrlist = []
 
@@ -138,7 +128,7 @@ def extendKMerToLCS(lLcsInfo,kMer,rLcsInfo):
                 tempPos= pos
                 lStrlist.insert(0,lLcsInfo[pos][1][1])
 
-    for pos in range(len(rLcsInfo)):
+    for pos in range(len(rLcsInfo)//2):
         if rLcsInfo[pos][0] == 'INDEL':
             pass
         else:
@@ -159,51 +149,69 @@ def finalCheck(lLcsInfo,KMer,rLcsInfo,lastMatchPos,lLcsStr,rLcsStr):
     hairpinStr = []
     loopStr = []
 
-    for i in range(lastMatchPos[0],len(lLcsInfo)):
-        if(lLcsInfo[i][1][0] == '-'):
-            pass
-        else:
-            hairpinStr.append(lLcsInfo[i][1][0])
-
+    if lastMatchPos[0] != len(lLcsInfo):
+        for i in range(lastMatchPos[0],len(lLcsInfo)):
+            if(lLcsInfo[i][1][0] == '-'):
+                pass
+            else:
+                hairpinStr.append(lLcsInfo[i][1][0])
+    else:
+        pass
 
     for ch in KMer:
         hairpinStr.append(ch)
 
-    for j in range(lastMatchPos[1]+1):
-        if(rLcsInfo[j][1][0]== '-'):
-            pass
-        else:
-            hairpinStr.append(rLcsInfo[j][1][0])
+    if lastMatchPos[1] != -1:
+        for j in range(lastMatchPos[1]+1):
+            if(rLcsInfo[j][1][0]== '-'):
+                pass
+            else:
+                hairpinStr.append(rLcsInfo[j][1][0])
+    else:
+        pass
 
-    for i in range(lastMatchPos[1]+1,len(rLcsInfo)-lastMatchPos[1]-1):
-        if(rLcsInfo[i][1][0]=='-'):
-            pass
-        else:
-            hairpinStr.append(rLcsInfo[i][1][0])
-            loopStr.append(rLcsInfo[i][1][0])
+    if lastMatchPos[1] != -1:
+        for i in range(lastMatchPos[1]+1,len(rLcsInfo)-lastMatchPos[1]-1):
+            if(rLcsInfo[i][1][0]=='-'):
+                pass
+            else:
+                hairpinStr.append(rLcsInfo[i][1][0])
+                loopStr.append(rLcsInfo[i][1][0])
+    else:
+        pass
 
-    for j in range(lastMatchPos[1],-1,-1):
-        if (rLcsInfo[j][1][1] == '-'):
-            pass
-        else:
-            hairpinStr.append(rLcsInfo[j][1][1])
+    if lastMatchPos[1] != -1:
+        for j in range(lastMatchPos[1],-1,-1):
+            if (rLcsInfo[j][1][1] == '-'):
+                pass
+            else:
+                hairpinStr.append(rLcsInfo[j][1][1])
+    else:
+        pass
 
     for ch in KMer[::-1]:
         hairpinStr.append(ch)
 
-    for i in range(len(lLcsInfo)-1,lastMatchPos[0]-1,-1):
-        if(lLcsInfo[i][1][1]== '-'):
-            pass
-        else:
-            hairpinStr.append(lLcsInfo[i][1][1])
+    if lastMatchPos[0] != len(lLcsInfo):
+        for i in range(len(lLcsInfo)-1,lastMatchPos[0]-1,-1):
+            if(lLcsInfo[i][1][1]== '-'):
+                pass
+            else:
+                hairpinStr.append(lLcsInfo[i][1][1])
+    else:
+        pass
 
     hairpinSeq = ''.join(hairpinStr)
     loopSeq = ''.join(loopStr)
 
     if(isHairpinConstraint(len(loopSeq),len(hairpinSeq))):
+        print("HAIRPIN: ")
         print(hairpinSeq)
+        print("LCSSEQ: ")
         print(lcsSeq)
+        print("LOOPSEQ: ")
         print(loopSeq)
+        print()
         return True
     else:
         return False
